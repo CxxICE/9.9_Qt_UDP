@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>427</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="lb_transmitData">
+      <property name="text">
+       <string>Данные для передачи</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="te_transmit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_send">
+      <property name="text">
+       <string>Отправить Датаграмму</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_clear">
+      <property name="text">
+       <string>Очистить данные для передачи</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="lb_receiveData">
+      <property name="text">
+       <string>Принятые данные</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextEdit" name="te_result"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_stop">
+      <property name="text">
+       <string>Остановить передачу</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_start">
+      <property name="text">
+       <string>Начать передачу</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>te_transmit</tabstop>
+  <tabstop>pb_send</tabstop>
+  <tabstop>pb_clear</tabstop>
+  <tabstop>te_result</tabstop>
+  <tabstop>pb_stop</tabstop>
+  <tabstop>pb_start</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>te_transmit</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>197</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>298</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
